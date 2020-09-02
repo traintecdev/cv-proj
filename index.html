@@ -7,44 +7,93 @@
     <link href="https://fonts.googleapis.com/css2?family=Martel:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Zaher Sh. Ibrahim</title>
+    <style>
+        .loader {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #1f1f1f;
+
+            text-align: center;
+        }
+
+        svg {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
-    <section class="scene-1">
-        <h1 class="rellax lax customZoomOut" data-lax-preset="blurInOut">
-            in 1986
-        </h1>
-    </section>
+    <div class="loader" id="loader">
+        <svg version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+            <circle fill="#fff" stroke="none" cx="6" cy="50" r="6">
+                <animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15"
+                    repeatCount="indefinite" begin="0.1" />
+            </circle>
+            <circle fill="#fff" stroke="none" cx="30" cy="50" r="6">
+                <animateTransform attributeName="transform" dur="1s" type="translate" values="0 10 ; 0 -10; 0 10"
+                    repeatCount="indefinite" begin="0.2" />
+            </circle>
+            <circle fill="#fff" stroke="none" cx="54" cy="50" r="6">
+                <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5"
+                    repeatCount="indefinite" begin="0.3" />
+            </circle>
+        </svg>
 
-    <section class="scene-2">
-        <img src="images/LatakiaRayanAzhari3.png" class="rellax" data-rellax-speed="-2" alt="">
-        <img src="images/LatakiaRayanAzhari2.png" class="rellax" data-rellax-speed="-1" alt="">
-        <h1 class="rellax" data-rellax-speed="-1">
-            In the coastal city of Latakia
-        </h1>
-        <img src="images/LatakiaRayanAzhari1.png" class="rellax" data-rellax-speed="0" alt=""
-            style="top: 2px !important">
-    </section>
+    </div>
 
-    <section class="scene-3 rellax" data-rellax-speed="0">
-        <img src="images/scene-3-1.jpg" class="rellax" data-rellax-speed="-2" alt="">
-        <h1 class="rellax" data-rellax-speed="1">
-            I was born..
-        </h1>
-        <img src="images/scene-3-2.png" class="rellax" data-rellax-speed="-1" alt="" style="z-index: 5;">
-    </section>
 
-    <section class="scene-4">
-        <h1 class="lax" data-lax-preset="leftToRight-.3" style="margin-bottom: 200px; font-size: 70px;">
-            in 1997
-        </h1>
-        <img src="images/pc.png" class="lax" data-lax-preset="leftToRight-.2 fadeIn" alt=""
-            style="margin-top: 125px; margin-right: 100px;">
-        <h1 class="lax" data-lax-preset="rightToLeft-.1" style="font-size: 50px;">
-            I got my first computer
-        </h1>
-    </section>
+    <div id="mainContent" style="display: none;">
+        <section class="scene-1">
+            <h1 class="rellax lax customZoomOut" data-lax-preset="blurInOut">
+                in 1986
+            </h1>
+        </section>
 
+        <section class="scene-2">
+            <img src="images/LatakiaRayanAzhari3.png" class="rellax" data-rellax-speed="-2" alt="">
+            <img src="images/LatakiaRayanAzhari2.png" class="rellax" data-rellax-speed="-1" alt="">
+            <h1 class="rellax" data-rellax-speed="-1">
+                In the coastal city of Latakia
+            </h1>
+            <img src="images/LatakiaRayanAzhari1.png" class="rellax" data-rellax-speed="0" alt=""
+                style="top: 2px !important">
+        </section>
+
+        <section class="scene-3 rellax" data-rellax-speed="0">
+            <img src="images/scene-3-1.jpg" class="rellax" data-rellax-speed="-2" alt="">
+            <h1 class="rellax" data-rellax-speed="1">
+                I was born..
+            </h1>
+            <img src="images/scene-3-2.png" class="rellax" data-rellax-speed="-1" alt="" style="z-index: 5;">
+        </section>
+
+        <section class="scene-4">
+            <h1 class="lax" data-lax-preset="leftToRight-.3" style="margin-bottom: 200px; font-size: 70px;">
+                in 1997
+            </h1>
+            <img src="images/pc.png" class="lax" data-lax-preset="leftToRight-.2 fadeIn" alt=""
+                style="margin-top: 125px; margin-right: 100px;">
+            <h1 class="lax" data-lax-preset="rightToLeft-.1" style="font-size: 50px;">
+                I got my first computer
+            </h1>
+        </section>
+    </div>
+    <script>
+        const loader = document.getElementById('loader');
+        const mainContent = document.getElementById('mainContent');
+
+        window.addEventListener('load', function () {
+            loader.style.display = 'none';
+            mainContent.style.display = 'block';
+        })
+    </script>
 
     <script src="rellax.min.js"></script>
     <script>
