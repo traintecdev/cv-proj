@@ -8,6 +8,27 @@
     <link rel="stylesheet" href="styles.css">
     <title>Zaher Sh. Ibrahim</title>
     <style>
+        .innerloader {
+            border: 16px solid #f3f3f3;
+            /* Light grey */
+            border-top: 16px solid #555555;
+
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
         .loader {
             width: 100%;
             height: 100%;
@@ -16,21 +37,16 @@
             left: 0;
             background-color: #1f1f1f;
 
-            text-align: center;
-        }
-
-        svg {
-            width: 200px;
-            height: 200px;
-            margin: 20px;
-            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
 
 <body>
     <div class="loader" id="preloader">
-        <svg version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+        <!-- <svg version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
             y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
             <circle fill="#fff" stroke="none" cx="6" cy="50" r="6">
                 <animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15"
@@ -44,8 +60,8 @@
                 <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5"
                     repeatCount="indefinite" begin="0.3" />
             </circle>
-        </svg>
-
+        </svg> -->
+        <div class="innerloader"></div>
     </div>
 
     <div class="wrapper">
