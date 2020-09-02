@@ -1,0 +1,18 @@
+{
+  "name": "cv-proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lax.min.js",
+  "dependencies": {
+    "lax.js": "^1.2.5",
+    "rellax": "^1.12.1",
+    "typed.js": "^2.0.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Martel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Zaher Sh. Ibrahim</title>
+</head>
+
+<body>
+    <section class="scene-1">
+        <h1 class="rellax lax customZoomOut" data-lax-preset="blurInOut">
+            in 1986
+        </h1>
+    </section>
+
+    <section class="scene-2">
+        <img src="images/LatakiaRayanAzhari3.png" class="rellax" data-rellax-speed="-2" alt="">
+        <img src="images/LatakiaRayanAzhari2.png" class="rellax" data-rellax-speed="-1" alt="">
+        <h1 class="rellax" data-rellax-speed="-1">
+            In the coastal city of Latakia
+        </h1>
+        <img src="images/LatakiaRayanAzhari1.png" class="rellax" data-rellax-speed="0" alt=""
+            style="top: 2px !important">
+    </section>
+
+    <section class="scene-3 rellax" data-rellax-speed="0">
+        <img src="images/scene-3-1.jpg" class="rellax" data-rellax-speed="-2" alt="">
+        <h1 class="rellax" data-rellax-speed="1">
+            I was born..
+        </h1>
+        <img src="images/scene-3-2.png" class="rellax" data-rellax-speed="-1" alt="" style="z-index: 5;">
+    </section>
+
+    <section class="scene-4">
+        <h1 class="lax" data-lax-preset="leftToRight-.3" style="margin-bottom: 200px; font-size: 70px;">
+            in 1997
+        </h1>
+        <img src="images/pc.png" class="lax" data-lax-preset="leftToRight-.2 fadeIn" alt=""
+            style="margin-top: 125px; margin-right: 100px;">
+        <h1 class="lax" data-lax-preset="rightToLeft-.1" style="font-size: 50px;">
+            I got my first computer
+        </h1>
+    </section>
+
+
+    <script src="rellax.min.js"></script>
+    <script>
+        var rellax = new Rellax('.rellax');
+    </script>
+    <script src="lax.min.js"></script>
+    <script>
+        window.onload = function () {
+            lax.setup() // init
+
+            const updateLax = () => {
+                lax.update(window.scrollY)
+                window.requestAnimationFrame(updateLax)
+            }
+
+            window.requestAnimationFrame(updateLax)
+        }
+    </script>
+</body>
+
+</html>
