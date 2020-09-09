@@ -49,7 +49,7 @@ section {
 }
 
 .scene-3 {
-	height: 1000px;
+	height: 900px;
 }
 .scene-2 h1 {
 	position: absolute;
@@ -69,6 +69,11 @@ section {
 .scene-4 h1 {
 	/* position: absolute; */
 	opacity: 0.8;
+}
+
+.scene-4 img {
+	margin-top: 125px;
+	margin-right: 100px;
 }
 .customZoomOut {
 	animation: customZoomOut 3000ms ease-out forwards;
@@ -92,4 +97,53 @@ to {
 	-moz-transform: scale(1);
 	-ms-transform: scale(1);
 	-o-transform: scale(1);
+}
+
+.scene-5 {
+	height: 500px;
+	/* display: flex; */
+	text-align: right;
+}
+#trex {
+	margin-top: 50px;
+	width: 90px;
+	height: 94px;
+}
+.scene-5-cont {
+	height: 700px;
+	background-color: #a5a5a5;
+	position: relative;
+}
+.scene-5-cont img {
+	position: absolute;
+}
+
+#sales-title {
+	color: #2a2a2a;
+	font-size: 40px;
+	position: absolute;
+	top: 5%;
+}
+#sales-hand {
+	right: 0;
+	bottom: 0;
+}
+
+#sales-computer {
+	right: 22%;
+	bottom: 6%;
+}
+
+#sales-pen {
+	left: 26%;
+	bottom: 10%;
+}
+
+#sales-notebook {
+	left: 10%;
+	bottom: 10%;
+}
+
+.scene-7 {
+	height: 700px;
 }

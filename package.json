@@ -4,6 +4,7 @@
   "description": "",
   "main": "lax.min.js",
   "dependencies": {
+    "howler": "^2.2.0",
     "lax.js": "^1.2.5",
     "rellax": "^1.12.1",
     "typed.js": "^2.0.11"
