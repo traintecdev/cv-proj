@@ -46,26 +46,18 @@
 
 <body>
     <div class="loader" id="preloader">
-        <!-- <svg version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-            y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
-            <circle fill="#fff" stroke="none" cx="6" cy="50" r="6">
-                <animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15"
-                    repeatCount="indefinite" begin="0.1" />
-            </circle>
-            <circle fill="#fff" stroke="none" cx="30" cy="50" r="6">
-                <animateTransform attributeName="transform" dur="1s" type="translate" values="0 10 ; 0 -10; 0 10"
-                    repeatCount="indefinite" begin="0.2" />
-            </circle>
-            <circle fill="#fff" stroke="none" cx="54" cy="50" r="6">
-                <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5"
-                    repeatCount="indefinite" begin="0.3" />
-            </circle>
-        </svg> -->
         <div class="innerloader"></div>
     </div>
 
+
     <div class="wrapper">
         <div id="mainContent" style="display: none;">
+
+            <div class="playSlideShow">
+                <img src="images/play.svg" width="25" alt="">
+                <div>Auto Scroll</div>
+            </div>
+
             <section class="scene-1">
                 <h1 class="rellax lax customZoomOut" data-lax-preset="blurInOut">
                     in 1986
@@ -130,6 +122,30 @@
             </section>
         </div>
     </div>
+
+    <script>
+        var played = false;
+        var playTimer;
+        document.querySelector('.playSlideShow').addEventListener('click', playSlideShow);
+        var playText = document.querySelector('.playSlideShow div');
+        var playImg = document.querySelector('.playSlideShow img');
+        function playSlideShow() {
+            if (!played) {
+                playText.innerHTML = "Stop Scroll";
+                playImg.src = "images/stop.svg";
+                playTimer = setInterval(function () {
+                    window.scrollBy(0, 1)
+                }, 10);
+                played = true;
+            } else {
+                clearInterval(playTimer);
+                playText.innerHTML = "Auto Scroll";
+                playImg.src = "images/play.svg";
+                played = false;
+            }
+        }
+
+    </script>
 
     <script>
         const loader = document.getElementById('preloader');
