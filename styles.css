@@ -26,6 +26,7 @@
 	-moz-transition: 0.3s;
 	-ms-transition: 0.3s;
 	-o-transition: 0.3s;
+	box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 .playSlideShow:hover {
 	transform: scale(1.1);
@@ -33,6 +34,7 @@
 	-moz-transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	-o-transform: scale(1.1);
+	box-shadow: -3px 3px 25px rgba(0, 0, 0, 0.5);
 }
 .playSlideShow div {
 	font-size: 15px;
